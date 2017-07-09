@@ -66,6 +66,7 @@ var tasks = [
 ];
 
 function initialize() {
+	// create data path
 	if (!fs.existsSync(DATAPATH)) fs.mkdirSync(DATAPATH);
 	// add crawl task
 	_.each(tasks, function (task) {
@@ -77,7 +78,7 @@ function initialize() {
 		});
 		workPool.push(job);
 	});
-
+	// setup dump job
 	var dumpJob = new cron({
 		cronTime: '59 59 23 * * *',
 		onTick: storeToFile,
