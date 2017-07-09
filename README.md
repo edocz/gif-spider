@@ -1,6 +1,16 @@
 # gif-spider
 crawl gif links from rss
 
+# Install
+```
+npm install
+```
+
+# Run
+```
+npm start
+```
+
 Sites
 ===========
 
